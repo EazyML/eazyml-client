@@ -1,5 +1,7 @@
 # eazyml-client
-A python client library wrapper for EazyML's REST API.
+A python client library wrapper for EazyML's REST API. 
+
+Supports Python 2.7 only. Python 3 support coming soon.
 
 Full API documentation can be found at https://www.eazyml.com/docs
 
