@@ -16,12 +16,14 @@ pip install configparser
 
 ## API URL
 ### Development
+The development environment supports users in Trial subscription.  
 By default the client library uses the development endpoint.
 ```
 https://development.eazyml.com/
 ```
 
 ### Production
+The production environment supports users that have subscribed to Standard, Deluxe or Premium subscriptions.
 ```
 https://production.eazyml.com/
 ```
