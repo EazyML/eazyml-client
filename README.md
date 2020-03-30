@@ -31,8 +31,8 @@ A user must authenticate and retrieve an authentication token to be used for all
 ```
 import eazyml
 
-username = 'api_demo'
-password = 'api_demo'
+username = <your username>
+password = <your password>
 
 auth_token = eazyml.ez_auth(username, password)
 ```
@@ -41,8 +41,8 @@ auth_token = eazyml.ez_auth(username, password)
 This API allows you to upload training data in a file. The accepted file formats are CSV and Microsoft Excel.
 ```
 import eazyml
-username = 'api_demo'
-password = 'api_demo'
+username = <your username>
+password = <your password>
 
 auth_token = eazyml.ez_auth(username, password)["token"]
 options = {
