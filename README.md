@@ -7,6 +7,13 @@ Full API documentation can be found at https://www.eazyml.com/docs
 
 # Getting Started
 
+## Prerequisites
+Our eazyml client library requires the following python package dependencies.
+```
+pip install requests
+pip install configparser
+```
+
 ## API URL
 ### Development
 By default the client library uses the development endpoint.
