@@ -1,6 +1,8 @@
 # eazyml-client
 A python client library wrapper for EazyML's REST API.
 
+Full API documentation can be found at https://www.eazyml.com/docs
+
 # Getting Started
 
 ## API URL
