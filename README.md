@@ -1,4 +1,4 @@
-# eazyml-client
+# eazyml
 A python client library wrapper for EazyML's REST API. 
 
 Supports Python 2.x only. Python 3 support coming soon.
