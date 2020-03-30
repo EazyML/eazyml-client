@@ -5,6 +5,7 @@ A python client library wrapper for EazyML's REST API.
 
 ## API URL
 ### Development
+By default the client library uses the development endpoint.
 ```
 https://development.eazyml.com/
 ```
