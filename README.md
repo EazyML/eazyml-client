@@ -5,12 +5,17 @@ A python client library wrapper for EazyML's REST API.
 
 ## API URL
 ### Development
-https://development.eazyml.com/ 
+```
+https://development.eazyml.com/
+```
 
 ### Production
-https://production.eazyml.com/ 
+```
+https://production.eazyml.com/
+```
 
 ## Authentication
+A user must authenticate and retrieve an authentication token to be used for all API calls. This API allows you to authenticate with EazyML and returns a token.
 ```
 import eazyml
 
@@ -36,5 +41,5 @@ options = {
         "accelerate": "yes",
         "outcome" : <outcome_column>
         }
-dataset_id = eazyml.ez_load(auth_token, “train_file_path”, options)
+dataset_id = eazyml.ez_load(auth_token, <train_file_path>, options)
 ```
