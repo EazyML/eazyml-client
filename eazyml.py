@@ -16,10 +16,10 @@ config_error_message = "Unable to load EazML Client Library. " \
 try:
     EAZYML_URL = config.get("URL", "EAZYML_URL")
     if not EAZYML_URL:
-        print config_error_message
+        print(config_error_message)
         exit()
 except configparser.NoOptionError as e:
-    print config_error_message
+    print(config_error_message)
     exit()
 
 API_URL = EAZYML_URL.rstrip("/") + "/ez_api"
@@ -87,7 +87,7 @@ def ez_auth(username, password):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -151,7 +151,7 @@ def ez_load(auth_token, filename, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -200,7 +200,7 @@ def ez_types(auth_token, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -254,7 +254,7 @@ def ez_set_outcome(auth_token, dataset_id, outcome, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -303,7 +303,7 @@ def ez_outlier(auth_token, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -351,7 +351,7 @@ def ez_impute(auth_token, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -386,9 +386,9 @@ def ez_init_model(auth_token, dataset_id, options = None):
         expressions      : Set None if user do not want to specify numeric derivations, machine will derive on its own
                            if derive_numeric set to "yes". If user want to derive numeric predictors as per their need
                            user should specify it.
-                           Expressions should be of the format 'Column_1 (operator) Column_2 where operator 
+                           Expressions should be of the format '"Column_1" (operator) "Column_2"' where operator
                            can either be '*' (multiply) or '/' (division)
-                           Ex: ['col1 * col2', 'col1 / col2']
+                           For Example: "expressions":['"column_1" * "column_2"','"column_3" * "column_4"']
         derive_text      : Set "yes" if text column is present and user want to derive text predictors else set "no"
         text_types       : The user can specify the different text types that he wants to derive.
                            Ex: {"col1":["sentiments"],"*":["glove", "sentiments", "concept extraction", "topic extraction"]}
@@ -443,7 +443,7 @@ def ez_init_model(auth_token, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -490,7 +490,7 @@ def ez_remove_dependent(auth_token, model_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -517,8 +517,9 @@ def ez_derive_numeric(auth_token, model_id, options = None):
         expressions          : Set None if user do not want to specify numeric derivations, machine will derive on its own
                                if derive_numeric set to "yes". If user want to derive numeric predictors as per their need
                                user should specify it.
-                               Expressions should be of the format 'Column_1 (operator) Column_2 where operator
+                               Expressions should be of the format '"Column_1" (operator) "Column_2"' where operator
                                can either be '*' (multiply) or '/' (division)
+                               For Example: "expressions":['"column_1" * "column_2"','"column_3" * "column_4"']
 
     Returns
     -------
@@ -557,7 +558,7 @@ def ez_derive_numeric(auth_token, model_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
         
 
@@ -639,7 +640,7 @@ def ez_derive_text(auth_token, model_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
         
 
@@ -686,7 +687,7 @@ def ez_select_features(auth_token, model_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
         
 
@@ -738,7 +739,7 @@ def ez_build_models(auth_token, model_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
         
 
@@ -814,7 +815,7 @@ def ez_predict(auth_token, model_id, filename, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
         
 
@@ -875,7 +876,7 @@ def ez_explain(auth_token, model_id, prediction_dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 def ez_insert(auth_token, filename, dataset_id, options = None):
@@ -934,7 +935,7 @@ def ez_insert(auth_token, filename, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -993,7 +994,7 @@ def ez_fetch(auth_token, dataset_id, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
 
 
@@ -1051,5 +1052,5 @@ def ez_config(auth_token, filename, options = None):
         response_json["status_code"] = status_code
         return response_json
     except Exception as e:
-        print(traceback.print_exc())
+        print((traceback.print_exc()))
         return exception_return(e, status_code)
