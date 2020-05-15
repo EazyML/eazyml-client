@@ -386,9 +386,9 @@ def ez_init_model(auth_token, dataset_id, options = None):
         expressions      : Set None if user do not want to specify numeric derivations, machine will derive on its own
                            if derive_numeric set to "yes". If user want to derive numeric predictors as per their need
                            user should specify it.
-                           Expressions should be of the format '"Column_1" (operator) "Column_2"' where operator
+                           Expressions should be of the format 'Column_1 (operator) Column_2 where operator 
                            can either be '*' (multiply) or '/' (division)
-                           For Example: "expressions":['"column_1" * "column_2"','"column_3" * "column_4"']
+                           Ex: ['col1 * col2', 'col1 / col2']
         derive_text      : Set "yes" if text column is present and user want to derive text predictors else set "no"
         text_types       : The user can specify the different text types that he wants to derive.
                            Ex: {"col1":["sentiments"],"*":["glove", "sentiments", "concept extraction", "topic extraction"]}
@@ -517,9 +517,8 @@ def ez_derive_numeric(auth_token, model_id, options = None):
         expressions          : Set None if user do not want to specify numeric derivations, machine will derive on its own
                                if derive_numeric set to "yes". If user want to derive numeric predictors as per their need
                                user should specify it.
-                               Expressions should be of the format '"Column_1" (operator) "Column_2"' where operator
+                               Expressions should be of the format 'Column_1 (operator) Column_2 where operator
                                can either be '*' (multiply) or '/' (division)
-                               For Example: "expressions":['"column_1" * "column_2"','"column_3" * "column_4"']
 
     Returns
     -------
