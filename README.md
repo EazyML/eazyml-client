@@ -35,6 +35,10 @@ username = <your username>
 password = <your password>
 
 auth_token = eazyml.ez_auth(username, password)
+
+# or authenticate using an API Key
+api_key = <your api key>
+auth_token = eazyml.ez_auth(username, api_key=api_key)
 ```
 
 ## Training Data Upload
