@@ -44,7 +44,7 @@ def exception_return(e, status_code):
     return return_response
 
 
-def ez_auth(username, password):
+def ez_auth(username, password=None, api_key=None):
     """EazyML Authorization Function
     
     Parameters
@@ -71,7 +71,8 @@ def ez_auth(username, password):
         API_REQUEST_URL = API_URL + "/ez_auth"
         payload = {
             "username": username,
-            "password": password
+            "password": password,
+			"api_key": api_key
         }
         headers = {
             "Content-Type": "application/json"
