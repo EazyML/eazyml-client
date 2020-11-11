@@ -111,14 +111,16 @@ def ez_load(auth_token, filename, options = None):
             "impute": <"yes"|"no">,
             "outlier": <"yes"|"no">,
             "discard": <[list of columns]|None>
-            "accelerate": <"yes"|"no">
+            "accelerate": <"yes"|"no">,
+            "shuffle": <"yes"|"no">
             }
         Where:
         identifier_column_name: Name of the identifier column. Machine will discard this column in model building
         impute                : Set "yes" if user want to impute missing column values else set "no"
         outlier               : Set "yes" if user want to remove outliers else set "no"
         discard               : List of the column names which user want to discard for model building.
-        *accelerate            : Set "yes" if user wants machine to upload the data without .... user else set "no"
+        accelerate            : Set "yes" if user wants machine to upload the data without .... user else set "no"
+        shuffle               : Set "yes" if user wants to shuffle the rows in the training data .... else set "no"
         
     Returns
     -------
