@@ -1,9 +1,21 @@
--h, --help                  :   Help
+usage: python eazyml_explain.pyc [-h] [-f] [-o] [-p] [--record_numbers] ...
+
+eazyml_explain is a command line tool used to generate PDF (Probability Distribution Function) of training data,
+to generate the train samples and perturbs the test data to generate the test samples,
+needed for EazyML's explainable API.
+
+mandatory arguments:
+
 -f, --training_data         :   Train filename with absolute path.
--m, --delimiter             :   Delimiter used in training file to separate columns.
+-p, --test_data             :   Test filename with absolute path.
 -o, --outcome               :   Outcome column name. It must be provided if training data is provided.
+-r, --record_numbers        :   Comma separated list of record number user want to understand.
+
+optional arguments:
+
+-m, --delimiter             :   Delimiter used in training file to separate columns.
+-h, --help                  :   Help
 -u, --out_dir               :   Directory path to store output files. If not provided output files will be saved in current directory.
 -d, --date_cols             :   Comma separated list of datetime columns if present in training data.
 -t, --text_cols             :   Comma separated list of text columns if present in training data.
 -s, --selected_features     :   Comma separated list of features selected during model building.
--r, --record_numbers        :   Comma separated list of record number user want to understand.
