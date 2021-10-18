@@ -19,10 +19,10 @@ pip install re
 ## Usage
 Run the client library as below:
 ```
-python eazyml_explain.py --training_data "train.csv" --outcome "Outcome" --test_data "test.csv" --record_numbers "1"
+python eazyml_explain.pyc --training_data "train.csv" --outcome "Outcome" --test_data "test.csv" --record_numbers "1"
 ```
 
-For all the options type help.
+Please run below to know all the supported options:
 ```
-python eazyml_explain.py --help
+python eazyml_explain.pyc --help
 ```
