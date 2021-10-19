@@ -1,6 +1,6 @@
 usage: python eazyml_explain.pyc [-h] [-f] [-o] [-p] [--record_numbers] ...
 
-eazyml_explain is a command line tool used to generate PDF (Probability Distribution Function) of training data,
+eazyml_explain is a command line tool used to generate PDF (Probability Density Function) of training data,
 to generate the train samples and perturbs the test data to generate the test samples,
 needed for EazyML's explainable API.
 
