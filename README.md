@@ -10,6 +10,8 @@ Our eazyml client library requires the following python package dependencies.
 ```
 pip install requests
 pip install configparser
+pip install pandas
+pip install pyarrow
 ```
 
 ## API URL
